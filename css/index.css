@@ -1,0 +1,139 @@
+#main_box{
+    height: 100vh;
+    width: 100%;
+    background: url('../images/main_bg_banner.jpg');
+    /* position: fixed; */
+    background-size: cover;
+
+}
+
+.nav_logo img{
+    height: 90px;
+    width: 100px;
+}
+.custom_nav .navbar-nav a{
+    color: #fff;
+    font-weight: 400;
+}
+
+.custom_nav .navbar-nav a.active{
+    color: #fff;
+}
+.custom_links{
+    gap: 20px;
+}
+.left_side_content_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.left_side_caption{
+    text-transform: uppercase;
+    color: #fff;
+}
+.left_side_heading{
+    color: #fff;
+    font-size: 4rem;
+}
+.left_side_content{
+    color: #fff;
+}
+.contact_us_card{
+    border-radius: 20px;
+}
+.contact_form_wrapper .input_box{
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 0px;
+    margin-bottom: 1rem;
+}
+.contact_label{
+    color: #fff;
+    font-weight: 500;
+}
+
+.contact_form_wrapper .input_box.active{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.contact_form_wrapper .input_box:focus{
+    /* border: none !important; */
+    outline: none !important;
+    box-shadow: none;
+    border-bottom: 1px solid #dee2e6;
+}
+.contact_form_wrapper .input_box:focus-visible{
+    /* border: none !important; */
+    outline: none !important;
+    box-shadow: none;
+    border-bottom: 1px solid #dee2e6;
+}
+
+
+/* .send_msg:hover{
+    background-color:#0d3f52 ;
+    color: #fff;
+} */
+
+.send_msg{
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+    margin: 20px 0px;
+    border-radius: 25px;
+    background-color: #011f2a;
+    height: 50px;
+    width: 100%;
+    color: #fff;
+}
+.send_msg::before{
+	position:absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #1b82cc;
+	transform: translateX(-100%);
+	transition: all 0.3s ease-in-out;
+    color: #fff;
+}
+.send_msg:hover::before{
+	transform: translateX(0);
+	
+	z-index: -1;
+    
+}
+.send_msg:hover{
+	/* color: ; */
+	font-weight: bolder;
+    color: #fff;
+}
+
+
+
+/* media query  */
+
+@media only screen and (max-width: 600px) {
+    #main_box {
+      height: max-content;
+    }
+    .left_side_caption{
+        text-align: center;
+    }
+    .left_side_heading{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .left_side_content{
+        display: none;
+    }
+    .left_side_content_wrapper {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    /* Add more styles for smaller screens here */
+  }
