@@ -1,9 +1,19 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+*{
+    /* font-family: 'Roboto', sans-serif; */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 #main_box{
-    height: 100vh;
+    min-height: 100vh;
+    max-height: auto;
     width: 100%;
     background: url('../images/main_bg_banner.jpg');
     /* position: fixed; */
     background-size: cover;
+    background-attachment:fixed ;
 
 }
 
@@ -37,6 +47,9 @@
 }
 .left_side_content{
     color: #fff;
+    font-size: 14px;
+    padding-right: 3rem;
+    /* line-height: 1px; */
 }
 .contact_us_card{
     border-radius: 20px;
@@ -113,6 +126,21 @@
     color: #fff;
 }
 
+.about_caption{
+    /* font-weight: 600; */
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.about_title{
+    font-weight: bold;
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+}
+.about_content{
+    color: rgb(33 36 41 / 75%)!important;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
 
 
 /* media query  */
