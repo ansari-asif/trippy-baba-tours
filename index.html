@@ -149,8 +149,7 @@
                 <span class="tour_days">4 NIGHT 5 DAYS TOUR</span>
                 <span class="tour_place">BANGKOK PATTAYA</span>
                </div>
-               <a href="#book_now_modal" data-target="#book_now_modal" data-toggle="modal">Book Now</a>
-               
+               <a href="javascript:void(0)" class="book_now_href">Book Now</a>               
               </div>
             </div>
           </div>
@@ -173,7 +172,7 @@
                 <span class="tour_days">4 NIGHT 5 DAYS TOUR</span>
                 <span class="tour_place">BANGKOK PATTAYA</span>
                </div>
-               <a href="javascript:void(0)">Book Now</a>
+               <a href="javascript:void(0)" class="book_now_href">Book Now</a>       
               </div>
             </div>
           </div>
@@ -196,7 +195,7 @@
                 <span class="tour_days">4 NIGHT 5 DAYS TOUR</span>
                 <span class="tour_place">BANGKOK PATTAYA</span>
                </div>
-               <a href="javascript:void(0)">Book Now</a>
+               <a href="javascript:void(0)" class="book_now_href">Book Now</a>       
               </div>
             </div>
           </div>
@@ -225,7 +224,7 @@
                 <span class="tour_days">4 NIGHT 5 DAYS TOUR</span>
                 <span class="tour_place">Unbeatable Dubai Trip</span>
                </div>
-               <a href="javascript:void(0)">Book Now</a>
+               <a href="javascript:void(0)" class="book_now_href">Book Now</a>       
               </div>
             </div>
           </div>
@@ -248,7 +247,7 @@
                 <span class="tour_days">4 NIGHT 5 DAYS TOUR</span>
                 <span class="tour_place">Incredible Dubai Trip</span>
                </div>
-               <a href="javascript:void(0)">Book Now</a>
+               <a href="javascript:void(0)" class="book_now_href">Book Now</a>       
               </div>
             </div>
           </div>     
@@ -273,11 +272,75 @@
       </div>
     </section>
     <section class="extra_modal">
-      <div id="book_now_modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+      <div id="book_now_modal" class="modal fade modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-body">
-              <h1>hello</h1>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="https://grow.trippybabatours.com/img/model1.jpg" alt="" class="img-fluid">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card " style="border: none;">
+                      <div class="card-body">
+                        <div class="modal_contact_header">
+                          <h4 class="card-title pb-4 fw-bold">Contact Us</h4>   
+                          <button type="button" style="background-color: #fff; border: none;" class="close modal_close_btn" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="font-size: 20px;color:red">&times;</span>
+                          </button>      
+                        </div>
+                                       
+                        <div class="contact_form_wrapper">
+                            <div class="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                          <label for="full_name">Full Name</label>
+                                          <input type="text" name="full_name" id="full_name" class="form-control input_box" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                          <label for="Mobile
+                                          ">Mobile :</label>
+                                          <input type="text" name="Mobile" id="Mobile" class="form-control input_box" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                          <label for="people">No of People:</label>
+                                          <input type="number" name="people" id="people" class="form-control input_box" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                          <label for="dest">Destination</label>
+                                          <select class="form-select mt-2" aria-label="Default select example">
+                                            <option value="1">Dubai</option>
+                                            <option value="2">Paris</option>
+                                            <option value="3">Malaysia</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                          <label for="people">Travel Date:</label>
+                                          <input type="date" name="date" id="date" class="form-control input_box" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn send_msg animate_btn">Send Message &nbsp;<i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>            
           </div>
         </div>
@@ -421,6 +484,10 @@
       </div>
     </section>
       <!-- Initialize Swiper -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"></script> 
   <script>
     var swiper = new Swiper(".mySwiper", {
       pagination: {
@@ -430,6 +497,16 @@
           return '<span class="' + className + '">' + (index + 1) + "</span>";
         },
       },
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      $(document).on('click','.book_now_href',function(){
+        $('#book_now_modal').modal('show');
+      })
+      $(document).on('click','.modal_close_btn',function(){
+        $('#book_now_modal').modal('hide');
+      })
     });
   </script>
 </body>
