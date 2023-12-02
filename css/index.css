@@ -14,6 +14,7 @@
     /* position: fixed; */
     background-size: cover;
     background-attachment:fixed ;
+    padding: 0px 40px;
 
 }
 
@@ -119,7 +120,14 @@
 	font-weight: bolder;
     color: #fff;
 }
-
+.about_section{
+    padding: 30px 0px;
+    margin: 30px 0px;
+}
+.left_side_about_wrapper{
+    padding: 20px 0px;
+    margin: 20px 0px;
+}
 .about_caption{
     /* font-weight: 600; */
     font-size: 14px;
@@ -285,8 +293,8 @@
   }
 
   .swiper-pagination-bullet-active {
-    color: #fff;
-    background: #007aff;
+    color: #fff !important;
+    background: #007aff !important;
   }
   .each_people{
     display: flex;
@@ -294,12 +302,75 @@
     align-items: center;
     flex-direction: column;
   }
+  .sliderWrapper{
+    height: 430px;
+  }
 /* end of swiper slide css code */
 /* media query  */
+.sm_d_block{
+    display: none;
+}
+.sm_d_none{
+    display: block;
+}
+
+.footer{
+    background-color:#000638;
+    color: #fff;
+    padding: 40px 60px;
+    padding-bottom: 5px;
+}
+.footer_left{
+    padding-right: 5rem;
+}
+.footer_each_section{
+    
+}
+.footer_each_section h5{
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.footer_each_section_ul{
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    font-size: 15px;
+    
+}
+.footer_each_section_ul li{
+    padding-bottom: 5px;
+    opacity: 0.5;
+}
+.footer_each_section_ul li a{
+    color: inherit;
+    text-decoration: none;
+}
+.footer_text{
+    padding: 20px 0px;
+    opacity: 0.5;
+}
+.border_bottom{
+    opacity: 0.7;
+    border: 1px solid;
+}
+.footer_social_iconsWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+}
+.footer_each_section_ul li .footer_social_icons{
+    color: #fff !important;
+    opacity: 1;
+}
+
 
 @media only screen and (max-width: 600px) {
     #main_box {
       height: max-content;
+      padding: 0px 20px;
+      padding-bottom: 30px;
     }
     .left_side_caption{
         text-align: center;
@@ -314,6 +385,48 @@
     .left_side_content_wrapper {
         margin-top: 40px;
         margin-bottom: 40px;
+    }
+    .about_section{
+        padding: 0px 0px;
+        margin: 0px 0px;
+    }
+    .sm_d_block{
+        display: block;
+    }
+    .sm_d_none{
+        display: none;
+    }
+    .left_side_about_wrapper{
+        padding: 30px 0px;
+        margin: 0px;
+    }
+    .packages_section{
+        padding: 0px 20px;
+    }
+    .check_our_packages_sec{
+        background-position: right top;
+        background-size: cover;
+    }
+    .check_packages_content_wrapper{
+        padding-left: 4rem;
+    }
+    .slider_Container{
+        padding: 0px;
+        margin-left: 5px;
+    }
+    .footer_left{
+        padding-right: 0rem;
+    }
+    .footer{
+        padding: 40px 20px;
+    }
+    .footer_each_section{
+        margin-top: 30px;
+    }
+    .footer_text{
+
+        padding: 0px 0px;
+        padding-top: 20px;
     }
     /* Add more styles for smaller screens here */
   }

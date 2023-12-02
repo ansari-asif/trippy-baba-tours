@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
 </head>
 <body>
-    <section class="main_box px-5" id="main_box">
+    <section class="main_box" id="main_box">
         <nav class="navbar navbar-expand-lg navbar-light custom_nav">
             <div class="container-fluid">
               <a class="navbar-brand nav_logo" href="/">
@@ -26,16 +25,16 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 custom_links">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#main_box">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Destination</a>
+                    <a class="nav-link" href="#targetDest">Destination</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="#targetAbout">About Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="#main_box">Contact Us</a>
                   </li>                  
                 </ul>
               </div>
@@ -107,25 +106,26 @@
             </div>
         </div>
     </section>
-    <section class="about_section py-5 my-5">
+    <section class="about_section" id="targetAbout">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-5">
-            <div class="py-5 my-4">
+            <div class="left_side_about_wrapper">
               <p class="about_caption"><strong>About TrippyBaba</strong></p>
               <h1 class="about_title">Providing the Best Travel Experiences, Always.</h1>
-              <p class="about_content">Trippy Baba is one of the best travel agencies so far in Delhi NCR. With a splendid experience of delivering the best travel experiences in most stunning holiday destinations ranging from Goa to Singapore and prominent honeymoon locations like Bali. In our journeys, we blend adventure and culture to provide unforgettable memories for our clients.For those with a spirit of exploration and adventure, We offer packages that will help them embark on a transforming journey.</p>
+              <p class="about_content sm_d_none">Trippy Baba is one of the best travel agencies so far in Delhi NCR. With a splendid experience of delivering the best travel experiences in most stunning holiday destinations ranging from Goa to Singapore and prominent honeymoon locations like Bali. In our journeys, we blend adventure and culture to provide unforgettable memories for our clients.For those with a spirit of exploration and adventure, We offer packages that will help them embark on a transforming journey.</p>
             </div>
           </div>
           <div class="col-md-7">
             <div>
               <img src="./images/about.png" alt="" class="img-fluid">
+              <p class="about_content sm_d_block my-5 mx-3">Trippy Baba is one of the best travel agencies so far in Delhi NCR. With a splendid experience of delivering the best travel experiences in most stunning holiday destinations ranging from Goa to Singapore and prominent honeymoon locations like Bali. In our journeys, we blend adventure and culture to provide unforgettable memories for our clients.For those with a spirit of exploration and adventure, We offer packages that will help them embark on a transforming journey.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="packages_section">
+    <section class="packages_section" id="targetDest">
       <div class="container">
         <p class="packages_caption">Our Thailand Packages Packages</p>
         <h1 class="packages_heading">Check Our Latest Thailand Packages</h1>
@@ -149,7 +149,8 @@
                 <span class="tour_days">4 NIGHT 5 DAYS TOUR</span>
                 <span class="tour_place">BANGKOK PATTAYA</span>
                </div>
-               <a href="javascript:void(0)">Book Now</a>
+               <a href="#book_now_modal" data-target="#book_now_modal" data-toggle="modal">Book Now</a>
+               
               </div>
             </div>
           </div>
@@ -257,10 +258,10 @@
     <section class="check_our_packages_sec">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <!-- <div class="col-md-6">
 
-          </div>
-          <div class="col-md-6">
+          </div> -->
+          <div class=" offset-md-6 offset-sm-2 col-md-6 col-sm-10">
             <div class="check_packages_content_wrapper">
               <h1 class="check_pack_headline"><strong>Thousand Explorers, One Beloved Travel Agency.</strong></h1>
               <small class="check_pack_content">Many of our clients have praised us for providing the best travel experiences to their preferred locations, like Thailand, Goa, Jammu & Kashmir, and the Andaman Islands.</small>
@@ -271,7 +272,18 @@
         </div>
       </div>
     </section>
-    <section class="feedback_section">
+    <section class="extra_modal">
+      <div id="book_now_modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h1>hello</h1>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feedback_section" id="targetTest">
       <div class="container-fluid" style="background-color: rgba(255,255,255,0.8);">
         <div class="row">
           <div class="col-md-6">
@@ -308,29 +320,6 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="swiper-slide">  <div class="each_people">
-                      <img class="rounded-circle shadow-1-strong mb-4"
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar"
-                        style="width: 150px;" />
-                      <div class="row d-flex justify-content-center">
-                        <div class="col-lg-8">
-                          <h5 class="mb-3">John Doe</h5>
-                          <p>Web Developer</p>
-                          <p class="text-muted">
-                            <i class="fa fa-quote-left pe-2"></i>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
-                            nesciunt sint eligendi reprehenderit reiciendis.
-                          </p>
-                        </div>
-                      </div>
-                      <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                      </ul>
-                    </div></div>
                     <div class="swiper-slide">
                       <div class="each_people">
                         <img class="rounded-circle shadow-1-strong mb-4"
@@ -356,81 +345,6 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="swiper-slide">  <div class="each_people">
-                      <img class="rounded-circle shadow-1-strong mb-4"
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar"
-                        style="width: 150px;" />
-                      <div class="row d-flex justify-content-center">
-                        <div class="col-lg-8">
-                          <h5 class="mb-3">John Doe</h5>
-                          <p>Web Developer</p>
-                          <p class="text-muted">
-                            <i class="fa fa-quote-left pe-2"></i>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
-                            nesciunt sint eligendi reprehenderit reiciendis.
-                          </p>
-                        </div>
-                      </div>
-                      <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                      </ul>
-                    </div></div>
-                    <div class="swiper-slide">
-                      <div class="each_people">
-                        <img class="rounded-circle shadow-1-strong mb-4"
-                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar"
-                          style="width: 150px;" />
-                        <div class="row d-flex justify-content-center">
-                          <div class="col-lg-8">
-                            <h5 class="mb-3">John Doe</h5>
-                            <p>Web Developer</p>
-                            <p class="text-muted">
-                              <i class="fa fa-quote-left pe-2"></i>
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
-                              nesciunt sint eligendi reprehenderit reiciendis.
-                            </p>
-                          </div>
-                        </div>
-                        <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                          <li><i class="fa fa-star fa-sm"></i></li>
-                          <li><i class="fa fa-star fa-sm"></i></li>
-                          <li><i class="fa fa-star fa-sm"></i></li>
-                          <li><i class="fa fa-star fa-sm"></i></li>
-                          <li><i class="fa fa-star fa-sm"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="swiper-slide"></div>
-                    <div class="each_people">
-                      <img class="rounded-circle shadow-1-strong mb-4"
-                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar"
-                        style="width: 150px;" />
-                      <div class="row d-flex justify-content-center">
-                        <div class="col-lg-8">
-                          <h5 class="mb-3">John Doe</h5>
-                          <p>Web Developer</p>
-                          <p class="text-muted">
-                            <i class="fa fa-quote-left pe-2"></i>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus et deleniti
-                            nesciunt sint eligendi reprehenderit reiciendis.
-                          </p>
-                        </div>
-                      </div>
-                      <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                        <li><i class="fa fa-star fa-sm"></i></li>
-                      </ul>
-                    </div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
                   </div>
                   <div class="swiper-pagination"></div>
                 </div>
@@ -444,6 +358,66 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 footer_left">
+            <div>
+              <a class="navbar-brand nav_logo" href="/">
+                <img src="./images/logo.png" alt="logo" srcset="">
+              </a>
+              <p class=" footer_text"><small>
+                Trippy Baba is one of the best travel agencies so far in Delhi NCR. With a splendid experience of delivering the best travel experiences in most stunning holiday destinations ranging from Goa to Singapore and prominent honeymoon locations like Bali.
+              </small></p>
+            </div>
+          </div>
+          <div class="col-md-7 pt-4">
+            <div class="row">
+              <div class="col-md-4 col-6">
+                <div class="footer_each_section">
+                  <h5>About</h5>
+                  <ul class="footer_each_section_ul">
+                    <li>- <a href="#targetAbout">About</a></li>
+                    <li>- <a href="#targetDest">Destination</a></li>
+                    <li>- <a href="#targetTest">Testimonial</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-6">
+                <div class="footer_each_section">
+                  <h5>Links</h5>
+                  <ul class="footer_each_section_ul">
+                    <li>- <a href="#main_box">Home</a></li>
+                    <li>- <a href="#targetAbout">About Us</a> </li>
+                    <li>- <a href="#main_box">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="footer_each_section">
+                  <h5>Contact Us</h5>
+                  <ul class="footer_each_section_ul">
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> <span>8178550422 / 7827423788</span></li>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>enquiry@trippybabatours.com</span></li>
+                    <li style="display: flex;">Social Links: 
+                      <span class="footer_social_iconsWrapper">
+                        <span class="footer_social_icons"><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
+                        <span class="footer_social_icons"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                        <span class="footer_social_icons"><i class="fa fa-instagram" aria-hidden="true"></i></span>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="border_bottom">
+      <div class="text-center">
+        <p class="footer_bottom_text">All Right reserved by &copy: trippybabatours.com</p>
       </div>
     </section>
       <!-- Initialize Swiper -->
